@@ -163,6 +163,7 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
 
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25);
   color: white; text-decoration: none; font-size: 1rem; font-weight: 500;
   padding: 14px 28px; border-radius: var(--radius); transition: all 0.3s ease;
 }
@@ -407,3 +408,574 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.6); padding: 60
   .btn-primary, .btn-secondary { justify-content: center; }
   .hero-headline { font-size: 2rem; }
 }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <div class="logo-mark">E</div>
+    <div class="logo-copy">
+      <span class="logo-name">Eduspark International</span>
+      <span class="logo-tagline">Pvt Ltd</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#portfolios">Student Portfolios</a>
+    <a href="#enroll" class="nav-btn-cta">Enroll Now</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home"       onclick="closeMobileNav()">Home</a>
+  <a href="#courses"    onclick="closeMobileNav()">Courses</a>
+  <a href="#syllabus"   onclick="closeMobileNav()">Syllabus</a>
+  <a href="#portfolios" onclick="closeMobileNav()">Student Portfolios</a>
+  <a href="#enroll"     onclick="closeMobileNav()" class="mob-cta">Enroll Now →</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section id="home">
+  <div class="hero-grid"></div>
+  <div class="orb1 hero-orb"></div>
+  <div class="orb2 hero-orb"></div>
+  <div class="orb3 hero-orb"></div>
+
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Official NSDC &amp; MIDC Training Partner</span>
+      </div>
+      <h1 class="hero-headline">
+        Empowering India's<br>Future <span class="accent">Cloud Architects.</span>
+      </h1>
+      <p class="hero-sub">
+        Master Cloud-Native Development with India's most comprehensive
+        NSDC/MIDC-certified program (SSC/Q8303). Hands-on training from industry
+        experts, real projects, and guaranteed certification.
+      </p>
+      <div class="hero-actions">
+        <a href="#enroll" class="btn-primary">🚀 Start Learning</a>
+        <a href="#courses" class="btn-secondary">View Curriculum →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">500<span class="stat-accent">+</span></span>
+          <span class="stat-label">Students Trained</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">92<span class="stat-accent">%</span></span>
+          <span class="stat-label">Placement Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Core Modules</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="nsdc-badge-hero">
+        <div class="nsdc-icon">🏅</div>
+        <div>
+          <div class="nsdc-title">Certified under SSC/Q8303</div>
+          <div class="nsdc-sub">National Skills Development Corporation · MIDC Approved</div>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon blue">☁️</div>
+        <div>
+          <div class="tech-title">Cloud Infrastructure</div>
+          <div class="tech-tags"><span class="tech-tag">AWS</span><span class="tech-tag">Linux</span><span class="tech-tag">Networking</span></div>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon orange">🛠️</div>
+        <div>
+          <div class="tech-title">Development Tools</div>
+          <div class="tech-tags"><span class="tech-tag">Git</span><span class="tech-tag">Docker</span><span class="tech-tag">Terraform</span></div>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon green">⚙️</div>
+        <div>
+          <div class="tech-title">Automation / CI-CD</div>
+          <div class="tech-tags"><span class="tech-tag">Jenkins</span><span class="tech-tag">Crontab</span><span class="tech-tag">Pipeline</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== COURSES ====== -->
+<section id="courses">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">What You'll Master</div>
+      <h2 class="section-title">Course Highlights</h2>
+      <p class="section-sub">A meticulously crafted curriculum aligned with NSDC's Cloud Application Developer standard, packed with real industry tools.</p>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card reveal reveal-delay-1">
+        <div class="course-icon-wrap icon-blue">☁️</div>
+        <div class="course-title">Cloud Infrastructure</div>
+        <p class="course-desc">Build and manage scalable, resilient cloud environments on AWS. Master core networking principles and Linux system administration essential for every cloud engineer.</p>
+        <div class="skill-pills">
+          <span class="pill">AWS</span><span class="pill">EC2 &amp; S3</span><span class="pill">Networking</span><span class="pill">Linux</span><span class="pill">IAM</span><span class="pill">VPC</span>
+        </div>
+      </div>
+      <div class="course-card highlight reveal reveal-delay-2">
+        <div class="course-icon-wrap icon-orange">🛠️</div>
+        <div class="course-title">Development Tools</div>
+        <p class="course-desc">Version control, containerization, and infrastructure-as-code. Learn how modern teams ship software reliably using Git workflows, Docker containers, and Terraform automation.</p>
+        <div class="skill-pills">
+          <span class="pill orange">Git &amp; GitHub</span><span class="pill orange">Docker</span><span class="pill orange">Terraform</span><span class="pill orange">IaC</span><span class="pill orange">Container Ops</span>
+        </div>
+      </div>
+      <div class="course-card reveal reveal-delay-3">
+        <div class="course-icon-wrap icon-navy">⚙️</div>
+        <div class="course-title">Automation / CI-CD</div>
+        <p class="course-desc">Automate deployment pipelines end-to-end. Configure Jenkins for continuous integration, schedule tasks with Crontab, and build production-ready CI/CD pipelines.</p>
+        <div class="skill-pills">
+          <span class="pill navy">Jenkins</span><span class="pill navy">Crontab</span><span class="pill navy">CI/CD Pipeline</span><span class="pill navy">Shell Scripts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SYLLABUS ====== -->
+<section id="syllabus">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">NSDC &amp; MIDC Program</div>
+      <h2 class="section-title">Official SSC/Q8303 Syllabus</h2>
+      <p class="section-sub">Our curriculum strictly follows the National Occupational Standards for the Cloud Application Developer qualification. Click any module to expand.</p>
+    </div>
+    <div class="syllabus-layout">
+      <div class="reveal">
+        <div class="cert-badge">
+          <div class="cert-row"><span class="cert-dot"></span><span class="cert-text"><strong>Qualification:</strong> Cloud Application Developer</span></div>
+          <div class="cert-row"><span class="cert-dot"></span><span class="cert-text"><strong>Code:</strong> SSC/Q8303 — Level 7</span></div>
+          <div class="cert-row"><span class="cert-dot"></span><span class="cert-text"><strong>Awarding Body:</strong> NSDC (National Skills Development Corporation)</span></div>
+          <div class="cert-row"><span class="cert-dot"></span><span class="cert-text"><strong>Partner:</strong> MIDC (Maharashtra Industrial Development Corp.)</span></div>
+          <div class="cert-row"><span class="cert-dot"></span><span class="cert-text"><strong>Duration:</strong> 6 Months · 300+ Practical Hours</span></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.75;">
+          This nationally recognized qualification prepares learners for roles in cloud application development, DevOps engineering, and cloud infrastructure management. Upon completion, graduates receive an NSDC-issued certificate valid across India and recognized by leading IT employers.
+        </p>
+      </div>
+
+      <div class="syllabus-modules reveal reveal-delay-1">
+        <div class="module-item" data-module="m1">
+          <div class="module-header" onclick="toggleModule('m1')">
+            <div class="module-num mod1">01</div>
+            <div class="module-meta">
+              <div class="module-name">Module 1: Introduction to Cloud Computing</div>
+              <div class="module-sub">Foundations · Cloud Models · Deployment Types</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>Introduction to cloud computing concepts and history</li>
+              <li>IaaS, PaaS, and SaaS service models explained</li>
+              <li>Public, private, hybrid, and multi-cloud architectures</li>
+              <li>Major cloud providers overview: AWS, Azure, GCP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-item" data-module="m2">
+          <div class="module-header" onclick="toggleModule('m2')">
+            <div class="module-num mod2">02</div>
+            <div class="module-meta">
+              <div class="module-name">Module 2: Linux &amp; Networking Fundamentals</div>
+              <div class="module-sub">OS Basics · Shell · TCP/IP · DNS</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>Linux command line, file system, and user management</li>
+              <li>Shell scripting and automation with Bash</li>
+              <li>TCP/IP networking, subnetting, and routing basics</li>
+              <li>DNS, DHCP, and load balancing concepts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-item open" data-module="m3">
+          <div class="module-header" onclick="toggleModule('m3')">
+            <div class="module-num mod3">03</div>
+            <div class="module-meta">
+              <div class="module-name">Module 3: Application Requirements ★</div>
+              <div class="module-sub">Core NSDC Module · Architecture · Design Patterns</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>Gathering and analyzing cloud application requirements</li>
+              <li>Microservices vs monolithic architecture decision making</li>
+              <li>Designing for scalability, availability, and fault-tolerance</li>
+              <li>Data storage selection: SQL, NoSQL, object storage</li>
+              <li>Security, compliance, and governance requirements</li>
+              <li>Budgeting and TCO analysis for cloud projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-item" data-module="m4">
+          <div class="module-header" onclick="toggleModule('m4')">
+            <div class="module-num mod4">04</div>
+            <div class="module-meta">
+              <div class="module-name">Module 4: Development &amp; Containerization</div>
+              <div class="module-sub">Git · Docker · Kubernetes · Terraform</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>Git version control, branching strategies and pull requests</li>
+              <li>Docker containerization from Dockerfile to deployment</li>
+              <li>Kubernetes orchestration basics and pod management</li>
+              <li>Infrastructure as Code with Terraform and Ansible</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-item" data-module="m5">
+          <div class="module-header" onclick="toggleModule('m5')">
+            <div class="module-num mod5">05</div>
+            <div class="module-meta">
+              <div class="module-name">Module 5: CI/CD &amp; DevOps Automation</div>
+              <div class="module-sub">Jenkins · Pipelines · Monitoring</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>Continuous Integration with Jenkins and GitHub Actions</li>
+              <li>Building and managing multi-stage deployment pipelines</li>
+              <li>Automated testing integration in CI/CD workflows</li>
+              <li>Task scheduling with Crontab and event-driven automation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module-item open" data-module="m6">
+          <div class="module-header" onclick="toggleModule('m6')">
+            <div class="module-num mod6">06</div>
+            <div class="module-meta">
+              <div class="module-name">Module 6: Service Management ★</div>
+              <div class="module-sub">Core NSDC Module · ITSM · Monitoring · Incident Response</div>
+            </div>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <ul class="module-topics">
+              <li>IT Service Management (ITSM) principles and ITIL framework</li>
+              <li>Cloud monitoring with CloudWatch, Grafana, and Prometheus</li>
+              <li>Incident detection, escalation, and resolution workflows</li>
+              <li>SLA management, uptime guarantees, and performance KPIs</li>
+              <li>Capacity planning and auto-scaling strategies</li>
+              <li>Change management and release coordination processes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PORTFOLIOS ====== -->
+<section id="portfolios">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Student Work</div>
+      <h2 class="section-title">Student Portfolios</h2>
+      <p class="section-sub">Real projects built during the program. Every Eduspark graduate leaves with a live portfolio and GitHub profile.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal reveal-delay-1">
+        <div class="port-thumb bg1">☁️<span class="port-label label-live">Live</span></div>
+        <div class="port-body">
+          <div class="port-name">AWS Auto-Scaling Web App</div>
+          <div class="port-student"><div class="student-avatar">RA</div> Riya Agarwal · Batch 2024</div>
+          <div class="port-stack"><span class="port-pill">AWS EC2</span><span class="port-pill">Auto Scaling</span><span class="port-pill">Route 53</span><span class="port-pill">CloudWatch</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-2">
+        <div class="port-thumb bg2">🐳<span class="port-label label-live">Live</span></div>
+        <div class="port-body">
+          <div class="port-name">Microservices on Docker</div>
+          <div class="port-student"><div class="student-avatar">SM</div> Sahil Mehta · Batch 2024</div>
+          <div class="port-stack"><span class="port-pill">Docker</span><span class="port-pill">Docker Compose</span><span class="port-pill">Nginx</span><span class="port-pill">Redis</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-3">
+        <div class="port-thumb bg3">⚙️<span class="port-label label-dev">In Dev</span></div>
+        <div class="port-body">
+          <div class="port-name">Jenkins CI/CD Pipeline</div>
+          <div class="port-student"><div class="student-avatar">PK</div> Priya Kulkarni · Batch 2025</div>
+          <div class="port-stack"><span class="port-pill">Jenkins</span><span class="port-pill">GitHub Webhooks</span><span class="port-pill">Shell</span><span class="port-pill">AWS S3</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ENROLLMENT ====== -->
+<section id="enroll">
+  <div class="hero-grid" style="opacity:0.3;"></div>
+  <div class="enroll-inner">
+    <div class="enroll-info reveal">
+      <div class="section-label" style="color:var(--orange-lt);">Begin Your Journey</div>
+      <h2 class="section-title" style="color:white;">Enrollment &amp; Fee Calculator</h2>
+      <p class="section-sub">Select your preferred batch, get an instant fee estimate, and submit your inquiry. Our team responds within 24 hours.</p>
+      <div class="enroll-features">
+        <div class="ef-item">
+          <div class="ef-icon">🎓</div>
+          <div><div class="ef-title">NSDC Certified Certificate</div><div class="ef-sub">Nationally recognized, industry-valued credential</div></div>
+        </div>
+        <div class="ef-item">
+          <div class="ef-icon">💼</div>
+          <div><div class="ef-title">Placement Assistance</div><div class="ef-sub">Resume building, mock interviews, job referrals</div></div>
+        </div>
+        <div class="ef-item">
+          <div class="ef-icon">🛠️</div>
+          <div><div class="ef-title">Hands-On Lab Access</div><div class="ef-sub">Live AWS sandbox environments during the program</div></div>
+        </div>
+        <div class="ef-item">
+          <div class="ef-icon">📅</div>
+          <div><div class="ef-title">Flexible Batches</div><div class="ef-sub">Weekday, weekend, and evening options available</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="enroll-form-wrap reveal reveal-delay-1">
+      <div id="formContent">
+        <div class="form-title">Apply Now</div>
+        <p class="form-sub">Fill in your details — we'll confirm your seat within 24 hrs.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name <span>*</span></label>
+            <input type="text" id="fname" placeholder="e.g. Riya Sharma">
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span>*</span></label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address <span>*</span></label>
+          <input type="email" id="email" placeholder="yourname@email.com">
+        </div>
+
+        <div class="form-group">
+          <label>Highest Qualification</label>
+          <select id="qualification">
+            <option value="">Select your qualification</option>
+            <option>10th Pass</option>
+            <option>12th Pass</option>
+            <option>Diploma (Any Field)</option>
+            <option>B.E. / B.Tech</option>
+            <option>B.Sc. Computer Science</option>
+            <option>Other Graduate</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Select Batch Type <span>*</span></label>
+          <select id="batchType" onchange="calculateFee()">
+            <option value="">Choose a batch to see fee</option>
+            <option value="25000">Weekday Batch (Mon–Fri) — ₹25,000</option>
+            <option value="28000">Weekend Batch (Sat–Sun) — ₹28,000</option>
+            <option value="22000">Evening Batch (7–9 PM) — ₹22,000</option>
+            <option value="35000">Intensive Fast-Track (4 Months) — ₹35,000</option>
+          </select>
+        </div>
+
+        <div class="fee-display" id="feeDisplay">
+          <div>
+            <div class="fee-label">Estimated Program Fee</div>
+            <div class="fee-note">Inclusive of all materials &amp; lab access</div>
+          </div>
+          <div class="fee-amount" id="feeAmount">₹0</div>
+        </div>
+
+        <div class="form-group">
+          <label>Message / Questions (Optional)</label>
+          <textarea id="message" placeholder="Any queries, preferred start date, or prior experience..."></textarea>
+        </div>
+
+        <button class="btn-submit" onclick="submitForm()">Submit Enrollment Inquiry →</button>
+      </div>
+
+      <div class="success-message" id="successMsg">
+        <div class="success-icon">🎉</div>
+        <div class="success-title">Application Received!</div>
+        <p class="success-sub">
+          Thank you for your interest in Eduspark International! Our admissions team will contact you within <strong>24 hours</strong> to confirm your batch, schedule, and enrollment details.
+        </p>
+        <button class="success-reset" onclick="resetForm()">Submit Another Inquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <div class="logo-mark">E</div>
+          <div class="logo-copy">
+            <span class="logo-name">Eduspark International</span>
+            <span class="logo-tagline">Pvt Ltd</span>
+          </div>
+        </a>
+        <p>Empowering India's future cloud architects with nationally certified, industry-aligned training. Official NSDC &amp; MIDC training partner since 2020.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#syllabus">Syllabus</a></li>
+          <li><a href="#portfolios">Portfolios</a></li>
+          <li><a href="#enroll">Enroll</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#courses">Cloud Infrastructure</a></li>
+          <li><a href="#courses">DevOps Toolchain</a></li>
+          <li><a href="#courses">CI/CD Automation</a></li>
+          <li><a href="#syllabus">SSC/Q8303</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@eduspark.in">info@eduspark.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="#">Nagpur, Maharashtra</a></li>
+          <li><a href="#">Mon–Sat, 9 AM – 7 PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eduspark International Pvt Ltd. All rights reserved. | Official NSDC Certified Training Partner</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Nav scroll effect ── */
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ── Hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  if (open) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans.forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+  }
+});
+
+function closeMobileNav() {
+  mobileNav.classList.remove('open');
+  hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+}
+
+/* ── Syllabus accordion ── */
+function toggleModule(id) {
+  document.querySelector('[data-module="' + id + '"]').classList.toggle('open');
+}
+
+/* ── Fee calculator ── */
+function calculateFee() {
+  const val = document.getElementById('batchType').value;
+  const display = document.getElementById('feeDisplay');
+  const amount  = document.getElementById('feeAmount');
+  if (val) {
+    amount.textContent = '₹' + parseInt(val).toLocaleString('en-IN');
+    display.classList.add('visible');
+  } else {
+    display.classList.remove('visible');
+  }
+}
+
+/* ── Form submission ── */
+function submitForm() {
+  const name  = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const batch = document.getElementById('batchType').value;
+
+  if (!name || !phone || !email || !batch) {
+    const missing = [];
+    if (!name)  missing.push('Full Name');
+    if (!phone) missing.push('Phone Number');
+    if (!email) missing.push('Email Address');
+    if (!batch) missing.push('Batch Type');
+    alert('Please fill in the required fields:\n• ' + missing.join('\n• '));
+    return;
+  }
+
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('successMsg').classList.add('visible');
+  window.scrollTo({ top: document.getElementById('enroll').offsetTop - 80, behavior: 'smooth' });
+}
+
+function resetForm() {
+  document.getElementById('formContent').style.display = 'block';
+  document.getElementById('successMsg').classList.remove('visible');
+  ['fname','phone','email','message'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('batchType').value = '';
+  document.getElementById('qualification').value = '';
+  document.getElementById('feeDisplay').classList.remove('visible');
+}
+
+/* ── Scroll reveal ── */
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
